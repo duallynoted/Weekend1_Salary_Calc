@@ -1,5 +1,3 @@
-console.log('js');
-
 //this will create a class of new employees
 class Employee {
     constructor(firstName, lastName, employeeID, title, salary) {
