@@ -20,7 +20,9 @@ function readyNow() {
     $('#empTableBody').on('click', '.removeEmp', handleDelete);
     $('#empTableBody').mouseenter(empTabBodMouseEnter);
     $('#empTableBody').mouseleave(empTabBodMouseLeave);
+
     addSalaries();
+    
 }//end readys
 
 function handleClick() {
@@ -84,8 +86,8 @@ function addSalaries() {
 }//end addSalaries
 
 function handleDelete() {
-    console.log('delete was clicked');
-    $(this).parent().parent().remove();
+    console.log('delete was clicked');    
+    $(this).parent().parent().remove();    
 }//end handleDelete
 
 //these functions should just target the moused over elements, but it is
@@ -99,3 +101,7 @@ function empTabBodMouseLeave() {
     $(this).css('background-color', '#eeeeeede');
 }//end empTabBodMouseLeave
 
+//this will give a warning before deleting employees
+// function alertBox(){
+//     alert('Are you sure you want to delete this employee?')
+// }
