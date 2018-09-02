@@ -56,7 +56,7 @@ function handleClick() {
     //this will place monthly totals on to the DOM
     $('#totalSalary').text('Total Monthly:' + '$' + totalSalary);
 
-    //this, `.val('')` clears out input data after submit button is clicked
+    //this, `.val('')`, clears out input data after submit button is clicked
     $('#firstNIn').val('')
     $('#lastNIn').val('')
     $('#iDIn').val('')
@@ -90,12 +90,12 @@ function handleDelete() {
 
 //these functions should just target the moused over elements, but it is
 //targets all in the table. need to come back to it
-function empTabBodMouseEnter(){
-    $(this).css('background-color', '#00ff59');      
+function empTabBodMouseEnter() {
+    $(this).css('background-color', '#00ff59');
 }//end empTabBodMouseEnter
 
-function empTabBodMouseLeave(){
-    
-    $(this).css('background-color', '#eeeeeede');    
+function empTabBodMouseLeave() {
+
+    $(this).css('background-color', '#eeeeeede');
 }//end empTabBodMouseLeave
 
