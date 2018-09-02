@@ -20,6 +20,8 @@ let totalSalary = 1
 function readyNow() {
     $('#submitButton').on('click', handleClick);
     $('#empTableBody').on('click', '.removeEmp', handleDelete);
+    $('#empTableBody').mouseenter(empTabBodMouseEnter);
+    $('#empTableBody').mouseleave(empTabBodMouseLeave);
     addSalaries();
 }//end readys
 
@@ -87,4 +89,15 @@ function handleDelete() {
     console.log('delete was clicked');
     $(this).parent().parent().remove();
 }//end handleDelete
+
+//these functions should just target the moused over elements, but it is
+//targets all in the table. need to come back to it
+function empTabBodMouseEnter(){
+    $(this).css('background-color', '#00ff59');      
+}//end empTabBodMouseEnter
+
+function empTabBodMouseLeave(){
+    
+    $(this).css('background-color', '#eeeeeede');    
+}//end empTabBodMouseLeave
 
