@@ -13,7 +13,7 @@ let allNewEmployees = [];
 
 $(document).ready(readyNow)
 let salary = [];
-let totalSalary = 1
+let totalSalary = 1;
 
 function readyNow() {
     $('#submitButton').on('click', handleClick);
@@ -26,11 +26,11 @@ function readyNow() {
 }//end readys
 
 function handleClick() {
-    let newFirstName = $('#firstNIn').val()
-    let newLastName = $('#lastNIn').val()
-    let newId = $('#iDIn').val()
-    let newTitle = $('#titleIn').val()
-    let newAnnSal = $('#annSalIn').val()
+    let newFirstName = $('#firstNIn').val();
+    let newLastName = $('#lastNIn').val();
+    let newId = $('#iDIn').val();
+    let newTitle = $('#titleIn').val();
+    let newAnnSal = $('#annSalIn').val();
 
     //this captures data from the input fields and pushes it in to the allNewEmployees array 
     //for some reason, writing `const = new Employee(firstName,...)` to push data
@@ -47,7 +47,7 @@ function handleClick() {
         <td>`+ newAnnSal + ` </td>
         <td><button class="removeEmp">Delete</button></td>
     </tr>`
-    )//end append input data to DOM
+    );//end append input data to DOM
 
     //this will push data from the Annual Salary input field into the 
     //salary array, which is then used in the addSalaries function 
@@ -59,11 +59,11 @@ function handleClick() {
     $('#totalSalary').text('Total Monthly:' + '$' + totalSalary);
 
     //this, `.val('')`, clears out input data after submit button is clicked
-    $('#firstNIn').val('')
-    $('#lastNIn').val('')
-    $('#iDIn').val('')
-    $('#titleIn').val('')
-    $('#annSalIn').val('')
+    $('#firstNIn').val('');
+    $('#lastNIn').val('');
+    $('#iDIn').val('');
+    $('#titleIn').val('');
+    $('#annSalIn').val('');
 }//end handleClick
 
 function addSalaries() {
@@ -73,7 +73,7 @@ function addSalaries() {
     }//end for loop 
     if (subTotal > 20000) {
         console.log('>$20,000');
-        $('#totalSalary').css('background-color', 'red')
+        $('#totalSalary').css('background-color', 'red');
 
         //was trying to turn the total green until it became red
         //I'll try again later
@@ -86,7 +86,6 @@ function addSalaries() {
 }//end addSalaries
 
 function handleDelete() {
-    console.log('delete was clicked');    
     $(this).parent().parent().remove();    
 }//end handleDelete
 
