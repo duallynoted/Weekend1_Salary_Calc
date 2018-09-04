@@ -82,7 +82,7 @@ function addSalaries() {
         //     $('#totalSalary').css('color', '#288739');
 
     }//end conditional
-    return subTotal;
+    return subTotal.toFixed(2);
 }//end addSalaries
 
 function handleDelete() {
